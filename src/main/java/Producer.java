@@ -10,7 +10,6 @@ public class Producer {
     public static void main(String[] args) {
         final KafkaProducer<String, String> mProducer;
         final Logger logger = LoggerFactory.getLogger(Producer.class);
-
     }
 
     Producer(String bootstrapServer) {
@@ -18,7 +17,8 @@ public class Producer {
         mProducer = new KafkaProducer<>(props);
     }
 
-    private Properties producerProps(String bootstrapServer){
+    private Properties producerProps(String bootstrapServer) {
+        System.out.println("da");
         String serializer = StringSerializer.class.getName();
         Properties props = new Properties();
         props.setProperty(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServer);
