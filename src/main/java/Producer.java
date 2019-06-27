@@ -24,7 +24,7 @@ public class Producer {
         props.setProperty(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServer);
         props.setProperty(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, serializer);
         props.setProperty(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, serializer);
-
+vv
         return props;
     }
 }
